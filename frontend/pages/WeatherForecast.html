@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Forecast</title>
+    <link rel="stylesheet" href="../css/WeatherForcast.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Live Weather Forecast</h1>
+        <p>Enter your city below to get the current weather and hourly forecast.</p>
+
+        <div class="input-group">
+            <input type="text" id="city" placeholder="Enter city name">
+            <button onclick="getWeather()">Get Weather</button>
+        </div>
+
+        <div id="temp-div" class="temperature-display"></div>
+        <div id="weather-info" class="weather-details"></div>
+        <img id="weather-icon" style="display: none;" alt="Weather Icon" />
+
+        <h2>Hourly Forecast (Next 24 Hours)</h2>
+        <div id="hourly-forecast" class="hourly-forecast"></div>
+
+        <button onclick="window.location.href='../index.html'" class="go-back-button">Back to Home</button>
+
+    </div>
+
+    <script src="../js/wf.js"></script>
+</body>
+</html>

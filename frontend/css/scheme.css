@@ -1,0 +1,65 @@
+body {
+    font-family: sans-serif;
+    background: url('../img/field-background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #2E7D32;
+    margin-bottom: 25px;
+}
+
+.scheme-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.scheme {
+    background-color: #8D6E63;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    text-align: left;
+}
+
+.scheme:hover {
+    transform: scale(1.05);
+}
+
+.scheme h2 {
+    margin-top: 0;
+}
+
+.go-back-button {
+    margin-top: 30px;
+    background-color: #FF9800;
+    color: #212121;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+    background-color: #e68900;
+}

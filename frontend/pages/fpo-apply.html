@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for FPO Membership</title>
+    <link rel="stylesheet" href="../css/fpo-apply.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Apply for FPO Membership</h1>
+        <form id="fpoApplyForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" required>
+            </div>
+            <div class="form-group">
+                <label for="crop">Primary Crop:</label>
+                <input type="text" id="crop" required>
+            </div>
+            <button type="submit">Submit Application</button>
+        </form>
+        <div id="confirmationMessage" class="confirmation-message"></div>
+        <button onclick="window.location.href='fpo.html'" class="go-back-button">Back to FPO</button>
+        <button onclick="window.location.href='../index.html'" class="go-back-button">Back to Home</button>
+    </div>
+    <script src="../js/fpo-apply.js"></script>
+</body>
+</html>

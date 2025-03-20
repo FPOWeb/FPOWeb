@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    background: url('../img/field-background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+h1 {
+    color: #2E7D32;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #212121;
+}
+
+.content p, .content ul {
+    text-align: left;
+    padding: 10px;
+    color: #333;
+}
+
+button {
+    background-color: #8D6E63;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #6D4C41;
+}
+
+#go-back {
+    background-color: #FF9800;
+}
+
+#go-back:hover {
+    background-color: #E68900;
+}

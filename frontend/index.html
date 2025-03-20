@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="app-title">Farmer's Hub</h1>
+        <button class="language-toggle" onclick="toggleLanguage()">Change Language</button>
+    </header>
+    <div class="container">
+        <p class="subtitle" id="subtitle">Choose from the below option</p>
+        <div class="button-container">
+            <button onclick="handleFPO()" id="fpo-btn">FPO</button>
+            <button onclick="handlePriceListing()" id="price-btn">Price Listing</button>
+            <button onclick="handleSchemeListing()" id="scheme-btn">Scheme Listing</button>
+            <button onclick="handleWeatherForecast()" id="weather-btn">Weather Forecast</button>
+            <button onclick="handleCropPlanning()" id="crop-btn">Crop Planning</button>
+            <button class="emergency" onclick="handleEmergencyHelp()" id="emergency-btn">Emergency Help</button>
+        </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
