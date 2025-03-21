@@ -2,9 +2,6 @@ const express = require('express');
 const router = express.Router();
 const CropPlan = require('../models/CropPlan');
 
-// @desc    Create new crop plan
-// @route   POST /api/crops
-// @access  Public
 router.post('/', async (req, res) => {
   try {
     const { cropName, plantingDate, harvestDate, quantity } = req.body;
@@ -51,7 +48,6 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    // For authenticated version: const cropPlans = await CropPlan.find({ userId: req.user._id });
     const cropPlans = await CropPlan.find({}).sort({ createdAt: -1 });
 
     res.status(200).json({
@@ -69,9 +65,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// @desc    Delete crop plan
-// @route   DELETE /api/crops/:id
-// @access  Public (should be private in production)
 router.delete('/:id', async (req, res) => {
   try {
     const cropPlan = await CropPlan.findById(req.params.id);
@@ -83,7 +76,6 @@ router.delete('/:id', async (req, res) => {
       });
     }
 
-    // For authenticated version: if (cropPlan.userId.toString() !== req.user._id.toString()) { unauthorized }
 
     await cropPlan.remove();
 

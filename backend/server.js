@@ -1,6 +1,6 @@
 const express = require('express');
-const dotenv = require('dotenv');
-const cors = require('cors');
+const dotenv = require('dotenv'); //module that loads that load variables from .env file
+const cors = require('cors'); //module that allows for cross-origin resource sharing
 const connectDB = require('./config/db');
 const path = require('path');
 

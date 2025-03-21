@@ -2,16 +2,14 @@ const express = require('express');
 const router = express.Router();
 const FpoApplication = require('../models/FpoApplication');
 
-// @desc    Submit FPO application
-// @route   POST /api/fpo/apply
-// @access  Public
+//Fpo apply route
 router.post('/apply', async (req, res) => {
   try {
     const { name, phone, location, crop } = req.body;
 
     // Validate required fields
     if (!name || !phone || !location || !crop) {
-      return res.status(400).json({
+      return res.status(400).json({ 
         success: false,
         message: 'Please provide all required fields'
       });
@@ -47,14 +45,12 @@ router.post('/apply', async (req, res) => {
   }
 });
 
-// @desc    Get all FPO applications
-// @route   GET /api/fpo/applications
-// @access  Private (should be restricted in production)
+
 router.get('/applications', async (req, res) => {
   try {
     const applications = await FpoApplication.find({}).sort({ applicationDate: -1 });
 
-    res.status(200).json({
+     res.status(200).json({
       success: true,
       count: applications.length,
       data: applications
