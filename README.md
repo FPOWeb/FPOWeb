@@ -1,5 +1,4 @@
-# Agricultural Web Application
-
+# Xasya
 A web application for farmers that includes FPO membership application and crop planning features.
 
 ## Features
