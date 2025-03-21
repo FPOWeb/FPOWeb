@@ -2,17 +2,17 @@ let language = "english";
 
 const translations = {
     assamese: {
-        title: "শস্যেল",
+        title: "শস্য",
         subtitle: "বিকল্পসমূহ পছন্দ কৰক",
         buttons: ["বিষয়ঃ FPO", "মূল্য তালিকা", "চৰকাৰী আঁচনি তালিকা", "বতৰৰ পূৰ্বানুমান", "শস্য পৰিকল্পনা", "জৰুৰীকালীন সহায়"]
     },
     english: {
-        title: "Farmer's Hub",
+        title: "Xasya",
         subtitle: "Choose from the below options",
         buttons: ["About FPOs", "Price Listings", "Government Scheme Listings", "Weather Forecast", "Crop Planning", "Emergency Help"]
     },
     hindi: {
-        title: "शस्याल",
+        title: "फसल",
         subtitle: "विकल्पों में से चुनें",
         buttons: ["एफपीओ के बारे में", "मूल्य सूची", "सरकारी योजना सूची", "मौसम पूर्वानुमान", "फसल योजना", "आपातकालीन सहायता"]
     }
