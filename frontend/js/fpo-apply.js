@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const crop = document.getElementById("crop").value;
 
         try {
-            // Show loading state
             confirmationMessage.textContent = "Submitting application...";
 
             // Send data to backend

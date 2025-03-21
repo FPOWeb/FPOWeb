@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cropList = document.getElementById("cropList");
     const API_URL = 'http://localhost:5000/api';
 
-    // Function to load saved crop plans
+// function to laod crop plan
     async function loadCropPlans() {
         try {
             cropList.innerHTML = '<p>Loading crop plans...</p>';
@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     cropList.appendChild(cropItem);
                 });
 
-                // Add event listeners to delete buttons
                 document.querySelectorAll('.delete-btn').forEach(button => {
                     button.addEventListener('click', deleteCropPlan);
                 });
@@ -61,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             if (response.ok) {
-                // Remove from UI
                 const cropItem = document.querySelector(`.crop-item[data-id="${id}"]`);
                 if (cropItem) {
                     cropItem.remove();
@@ -107,10 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const data = await response.json();
 
             if (response.ok) {
-                // Reset form
                 cropForm.reset();
 
-                // Reload the crop list to show the new entry
                 loadCropPlans();
             } else {
                 alert(data.message || 'Failed to add crop plan. Please try again.');
@@ -121,6 +117,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Load crop plans when page loads
     loadCropPlans();
 });
